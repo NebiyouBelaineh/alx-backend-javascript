@@ -9,8 +9,4 @@ export default function createReportObject(employeesList) {
   };
 
   return obj;
-
 }
-
-// employeesList is a the return value of createEmployeesObject
-// createReportObject: should return an object
