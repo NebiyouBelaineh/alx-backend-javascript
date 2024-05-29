@@ -5,15 +5,8 @@ function handleProfileSignup() {
 
   Promise.all(promises)
     .then((response) => {
-      // const results = [];
-      // destructure responses and save to photoResponse and userResponse
       const [photoResponse, userResponse] = response;
-      // results.push(photoResponse.body);
-      // results.push(userResponse.firstName);
-      // results.push(userResponse.lastName);
-      console.log(`${photoResponse.body} ${userResponse.firstName} ${userResponse.lastName}`);
-
-      // console.log(results.join(' '));
+      console.log(`${response[0].body} ${response[1].firstName} ${response[1].lastName}`);
     })
     .catch(() => {
       console.log('Signup system offline');
