@@ -5,15 +5,15 @@ function handleProfileSignup() {
 
   Promise.all(promises)
     .then((response) => {
-      const results = [];
+      // const results = [];
       // destructure responses and save to photoResponse and userResponse
       const [photoResponse, userResponse] = response;
-      results.push(photoResponse.body);
-      results.push(userResponse.firstName);
-      results.push(userResponse.lastName);
+      // results.push(photoResponse.body);
+      // results.push(userResponse.firstName);
+      // results.push(userResponse.lastName);
+      console.log(`${photoResponse.body} ${userResponse.firstName} ${userResponse.lastName}`);
 
-      console.log(results.join(' '));
-      // console.log(response);
+      // console.log(results.join(' '));
     })
     .catch(() => {
       console.log('Signup system offline');
