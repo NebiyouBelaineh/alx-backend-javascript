@@ -1,8 +1,8 @@
 class HolbertonCourse {
   constructor(name, length, students) {
-    this._name = name;
-    this._length = length;
-    this._students = students;
+    this.name = name;
+    this.length = length;
+    this.students = students;
   }
 
   get name() {
@@ -26,7 +26,7 @@ class HolbertonCourse {
   }
 
   set length(length) {
-    if (['number', 'BigInt'].includes(typeof length) && length.length > 0) {
+    if (['number', 'BigInt'].includes(typeof length) && length > 0) {
       this._length = length;
     } else {
       throw new TypeError('Length must be a number');
