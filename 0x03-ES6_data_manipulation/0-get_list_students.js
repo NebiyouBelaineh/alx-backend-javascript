@@ -8,4 +8,4 @@ function getListStudents() {
   return listStudents;
 }
 export default getListStudents;
-export { listStudents };
+// export { listStudents };
