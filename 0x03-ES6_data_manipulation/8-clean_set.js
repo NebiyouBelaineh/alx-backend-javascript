@@ -5,11 +5,10 @@ function cleanSet(set, startString) {
   then we join the values using '-' */
   const len = startString.length;
   const strArr = [];
-  if (startString === '') {
-    return '';
-  }
+
   for (const value of set) {
-    if (value.startsWith(startString)) {
+    if (value.startsWith(startString) && startString !== '') {
+      // console.log(value);
       strArr.push(value.slice(len));
     }
   }
