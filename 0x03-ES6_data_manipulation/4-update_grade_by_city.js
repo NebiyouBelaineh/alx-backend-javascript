@@ -5,7 +5,7 @@ function updateStudentGradeByCity(listStudents, city, newGrades) {
 
   return locationFiltered.map((student) => {
     const newGradeObj = newGrades.find((newGrade) => newGrade.studentId === student.id);
-    console.log(newGradeObj);
+    // console.log(newGradeObj);
     if (newGradeObj.grade) {
       return { ...student, grade: newGradeObj.grade };
     }
