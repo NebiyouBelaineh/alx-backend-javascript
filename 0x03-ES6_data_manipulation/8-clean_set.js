@@ -1,5 +1,5 @@
 function cleanSet(set, startString) {
-  if (!(set instanceof Set) || (typeof startString !== 'string') || startString.length === 0) {
+  if (!(set instanceof Set) || (typeof startString !== 'string') || startString.length === 0 || startString === '') {
     return '';
   }
   const len = startString.length;
