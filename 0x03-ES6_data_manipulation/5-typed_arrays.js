@@ -10,6 +10,5 @@ function createInt8TypedArray(length, position, value) {
   }
   dataView.setInt8(position, value);
   return dataView;
-
 }
 export default createInt8TypedArray;
