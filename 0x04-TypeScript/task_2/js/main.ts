@@ -63,3 +63,16 @@ const executeWork = (employee: Director | Teacher): void => {
 
 executeWork(createEmployee(200));
 executeWork(createEmployee(1000));
+
+let Subjects: 'Math' | 'History';
+
+const teachClass = (todayClass: typeof Subjects) : string => {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    } else if (todayClass === 'History') {
+        return 'Teaching History';
+    }
+}
+
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
