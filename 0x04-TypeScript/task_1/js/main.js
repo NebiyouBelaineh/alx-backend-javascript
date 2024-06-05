@@ -13,7 +13,7 @@ var teacher2 = {
     contract: "Permanent",
     yearsOfExperience: 3,
 };
-var director = {
+var director1 = {
     firstName: 'John',
     fullTimeEmployee: false,
     lastName: 'Doe',
@@ -24,4 +24,8 @@ var director = {
 };
 console.log(teacher1);
 console.log(teacher2);
-console.log(director);
+console.log(director1);
+var printTeacher = function (firstName, lastName) {
+    return "-> ".concat(firstName.slice(0, 1), ". ").concat(lastName);
+};
+console.log(printTeacher("Jane", "Doe"));
