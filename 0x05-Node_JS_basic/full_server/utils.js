@@ -46,3 +46,4 @@ function readDatabase(database) {
 }
 
 module.exports = readDatabase;
+export default readDatabase;

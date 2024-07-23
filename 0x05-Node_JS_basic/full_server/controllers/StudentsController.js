@@ -52,3 +52,4 @@ class StudentConroller {
 }
 
 export default StudentConroller;
+module.exports = StudentConroller;
