@@ -9,6 +9,7 @@ const stream = require('stream');
 
 const port = 1245;
 const countStudents = require('./3-read_file_async');
+
 const database = process.argv.length > 2 ? process.argv[2] : 'database.csv';
 
 function createConsoleCaptureStream() {
@@ -46,7 +47,7 @@ const app = http.createServer((req, res) => {
   if (req.url === '/') {
     res.end('Hello Holberton School!');
   } else if (req.url === '/students') {
-    countStudents('database.csv')
+    countStudents(database)
       .then(() => {
         // Replace original console.log
         console.log = originalConsoleLog;
