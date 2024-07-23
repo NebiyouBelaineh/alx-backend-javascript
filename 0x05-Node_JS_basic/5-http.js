@@ -9,6 +9,7 @@ const stream = require('stream');
 
 const port = 1245;
 const countStudents = require('./3-read_file_async');
+const database = process.argv.length > 2 ? process.argv[2] : 'database.csv';
 
 function createConsoleCaptureStream() {
   const captureStream = new stream.Writable();
