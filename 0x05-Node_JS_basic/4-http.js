@@ -5,7 +5,7 @@ create a small HTTP server using the http module
 
 const http = require('http');
 const port = 12345;
-
+// eslint-disable-next-line
 const app = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.end('Hello Holberton School!');
