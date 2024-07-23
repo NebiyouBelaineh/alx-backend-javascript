@@ -9,7 +9,7 @@ const port = 1245;
 appRoute(app);
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
-})
+  // console.log(`Server running at http://localhost:${port}/`);
+});
 
 export default app;

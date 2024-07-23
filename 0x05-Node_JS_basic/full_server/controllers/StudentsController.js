@@ -36,7 +36,7 @@ class StudentConroller {
     const { major } = req.params;
     // console.log(major);
     if (major !== 'CS' && major !== 'SWE') {
-      res.status(500).send(Error('Major must be CS or SWE'));
+      res.status(500).send('Major must be CS or SWE');
       return;
     }
     readDatabase(database)
