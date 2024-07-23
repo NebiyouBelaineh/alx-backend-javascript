@@ -3,7 +3,6 @@
 This file contains utility functions
 */
 const fs = require('fs');
-const path = require('path');
 
 function countStudents(databasePath) {
   // const filePath = path.join(__dirname, databasePath);
