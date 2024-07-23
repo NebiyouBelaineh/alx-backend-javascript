@@ -13,11 +13,10 @@ function countStudents(databasePath) {
     // console.log(file);
     const students = file.split('\n');
     if (students[students.length - 1] === '') {
-      students.pop();
+      students.pop(); // removes empty line
     }
-    students.shift();
+    students.shift(); // removes first line titles
     console.log(`Number of students: ${students.length}`);
-    // console.log(students);
     const studyFields = {
       CS: {
         list: [],
@@ -27,12 +26,11 @@ function countStudents(databasePath) {
       },
     };
     for (const student of students) {
-      // const [fName, lname, age, field] = student.split(',');
+      // capture first name and field of study
       const fName = student.split(',')[0];
       const field = student.split(',')[3];
       // console.log(field, lname, age);
       studyFields[field].list.push(fName);
-      // console.log(studyFields[field].list.length);
     }
     for (const field in studyFields) {
       if (Object.prototype.hasOwnProperty.call(studyFields, field)) {
@@ -40,7 +38,6 @@ function countStudents(databasePath) {
       }
     }
   } catch (err) {
-    // console.log(err);
     throw Error('Cannot load the database');
   }
 }
