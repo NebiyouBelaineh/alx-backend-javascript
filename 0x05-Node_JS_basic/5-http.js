@@ -6,6 +6,7 @@ and '/students'
 
 const http = require('http');
 const stream = require('stream');
+const database = process.argv.length > 2 ? process.argv[2] : '';
 
 const port = 1245;
 const countStudents = require('./3-read_file_async');
@@ -45,7 +46,7 @@ const app = http.createServer((req, res) => {
   if (req.url === '/') {
     res.end('Hello Holberton School!');
   } else if (req.url === '/students') {
-    countStudents('database.csv')
+    countStudents(database)
       .then(() => {
         // Replace original console.log
         console.log = originalConsoleLog;
