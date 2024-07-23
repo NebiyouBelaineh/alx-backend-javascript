@@ -7,7 +7,7 @@ const app = express();
 const stream = require('stream');
 
 const database = process.argv[2];
-console.log(typeof database, database);
+// console.log(typeof database, database);
 
 const countStudents = require('./3-read_file_async');
 
