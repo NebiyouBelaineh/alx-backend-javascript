@@ -6,7 +6,7 @@ and '/students'
 
 const http = require('http');
 const stream = require('stream');
-const database = process.argv.length > 2 ? process.argv[2] : '';
+const database = process.argv.length > 2 ? process.argv[2] : 'database.csv';
 
 const port = 1245;
 const countStudents = require('./3-read_file_async');
