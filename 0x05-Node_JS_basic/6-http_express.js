@@ -5,7 +5,7 @@ An express app
 const express = require('express');
 const app = express();
 
-const port = 12345;
+const port = 1245;
 
 // eslint-disable-next-line
 app.get('/', (req, res) => {
