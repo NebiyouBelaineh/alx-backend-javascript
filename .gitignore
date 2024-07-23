@@ -132,3 +132,4 @@ dist
 babel.config.js
 package-lock.json
 package.json
+example*
