@@ -6,7 +6,7 @@ and logs the number of students and number of students in fields(CS, SWE)
 const fs = require('fs');
 const path = require('path');
 
-function countStudents (databasePath) {
+function countStudents(databasePath) {
   const filePath = path.join(__dirname, databasePath);
   try {
     const file = fs.readFileSync(filePath, 'utf-8');
@@ -36,7 +36,7 @@ function countStudents (databasePath) {
     }
     for (const field in studyFields) {
       if (Object.prototype.hasOwnProperty.call(studyFields, field)) {
-        console.log(`Number of students in ${field}: ${studyFields[field].list.length}`);
+        console.log(`Number of students in ${field}: ${studyFields[field].list.length}. List: ${studyFields[field].list.join(', ')}`);
       }
     }
   } catch (err) {
