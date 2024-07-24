@@ -47,11 +47,11 @@ const app = http.createServer((req, res) => {
   if (req.url === '/') {
     res.end('Hello Holberton School!');
   } else if (req.url === '/students') {
+    res.write('This is the list of our students\n');
     countStudents(database)
       .then(() => {
         // Replace original console.log
         console.log = originalConsoleLog;
-        res.write('This is the list of our students\n');
         // console.log(getCapturedOutput());
         res.end(getCapturedOutput());
       })

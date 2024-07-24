@@ -48,11 +48,11 @@ app.get('/students', (req, res) => {
     // originalConsoleLog(...args);
     captureStream.write(args.join(''));
   };
+  res.write('This is the list of our students\n');
   countStudents(database)
     .then(() => {
       // Replace original console.log
       console.log = originalConsoleLog;
-      res.write('This is the list of our students\n');
       // console.log(getCapturedOutput());
       res.end(getCapturedOutput());
     })
