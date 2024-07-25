@@ -15,7 +15,7 @@ describe('getPaymentTokenFromAPI', function (done) {
     it('should respond with { data: "Successful response from the API"} promise payload when success === true', function () {
         const ret = getPaymentTokenFromAPI(true)
             .then(result => {
-                expect(result).to.eventually.equal({ data: 'Successful response from the API' });
+                expect(result).to.deep.equal({ data: 'Successful response from the API' });
                 done();
             })
             .catch(error => {
