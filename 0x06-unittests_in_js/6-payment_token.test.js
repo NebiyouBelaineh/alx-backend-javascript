@@ -12,8 +12,8 @@ const getPaymentTokenFromAPI = require('./6-payment_token');
 chai.use(require('chai-as-promised'));
 
 describe('getPaymentTokenFromAPI', function (done) {
-    it('should respond with { data: "Successful response from the API"} promise payload when success === true', function () {
-        const ret = getPaymentTokenFromAPI(true)
+    it('should respond with { data: "Successful response from the API"} promise payload when success === true', function (done) {
+        getPaymentTokenFromAPI(true)
             .then(result => {
                 expect(result).to.deep.equal({ data: 'Successful response from the API' });
                 done();
