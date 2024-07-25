@@ -14,7 +14,6 @@ describe('sendPaymentRequestToApi', function () {
     afterEach(function () {
         // Restore the stub and spy
         spy_console.restore();
-        stub.restore();
     });
 
     it('test sendPaymentRequestToAPI with 100 and 20 as arguments\
