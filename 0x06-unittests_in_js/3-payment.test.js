@@ -13,5 +13,6 @@ describe('sendPaymentRequestToApi', function () {
         sendPaymentRequestToApi(100, 20);
         // Assert that calculateNumber was called with 'SUM' and 100 and 20
         expect(spy.calledWith('SUM', 100, 20)).to.be.true;
+        spy.restore();
     });
 });
