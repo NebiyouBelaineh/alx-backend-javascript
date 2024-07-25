@@ -1,9 +1,10 @@
 #!/usr/bin/env node
+
 function getPaymentTokenFromAPI(success) {
-    if (success) {
-        return Promise.resolve({ data: 'Successful response from the API' });
-    }
-    // If success is false, return an empty promise
-    return Promise.resolve();
+    return new Promise((resolve, reject) => {
+        if (success) {
+            resolve({data: 'Successful response from the API'});
+        }
+    });
 }
 module.exports = getPaymentTokenFromAPI;
