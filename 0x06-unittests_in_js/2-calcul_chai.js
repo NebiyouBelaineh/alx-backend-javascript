@@ -15,5 +15,5 @@ function calculateNumber(type, a, b) {
             return;
     }
 }
-export default calculateNumber;
-// module.exports = calculateNumber;
+// export default calculateNumber;
+module.exports = calculateNumber;

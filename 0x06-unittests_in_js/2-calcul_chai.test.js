@@ -4,10 +4,10 @@
  * Test 2-calcul_chai.js
  */
 
-import { expect } from 'chai';
-import calculateNumber from './2-calcul_chai.js';
+const expect = require('chai').expect;
+const calculateNumber = require('./2-calcul_chai.js');
 
-describe('calculateNumber from 1-calcul', function () {
+describe('calculateNumber from 2-calcul', function () {
     it('sum of 1.2 and 2 should return a number', function () {
         expect(calculateNumber('SUM', 1.2, 2)).to.be.a('number');
     });

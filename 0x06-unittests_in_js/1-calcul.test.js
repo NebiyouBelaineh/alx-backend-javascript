@@ -4,8 +4,8 @@
  * Test 1-calcul.js
  */
 
-import assert from 'assert';
-import calculateNumber from './1-calcul.js';
+const assert = require('assert');
+const calculateNumber = require('./1-calcul');
 // const calculateNumber = require('./1-calcul');
 
 describe('calculateNumber from 1-calcul', function () {
