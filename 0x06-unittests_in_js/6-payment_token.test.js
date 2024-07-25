@@ -22,4 +22,15 @@ describe('getPaymentTokenFromAPI', function (done) {
                 done(error)
             });
     });
+
+    it('should respond with undefined promise payload when success === false', function (done) {
+        getPaymentTokenFromAPI(false)
+            .then(result => {
+                expect(result).to.be.undefined;
+                done();
+            })
+            .catch(error => {
+                done(error)
+            });
+    });
 });
