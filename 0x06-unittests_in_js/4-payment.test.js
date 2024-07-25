@@ -13,7 +13,11 @@ describe('sendPaymentRequestToApi', function () {
         sendPaymentRequestToApi(100, 20);
 
         expect(stub.calledWith('SUM', 100, 20)).to.be.true;
+        expect(stub.calledOnce).to.be.true;
+
         expect(spy_console.calledWith('The total is: 10')).to.be.true;
+        expect(spy_console.calledOnce).to.be.true;
+
         spy_console.restore();
         stub.restore();
     });
