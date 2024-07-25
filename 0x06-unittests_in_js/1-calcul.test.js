@@ -4,11 +4,12 @@
  * Test 1-calcul.js
  */
 
-const assert = require('assert');
-
-const calculateNumber = require('./1-calcul');
+import assert from 'assert';
+import calculateNumber from './1-calcul.js';
+// const calculateNumber = require('./1-calcul');
 
 describe('calculateNumber from 1-calcul', function () {
+    it('type should be string');
     it('sum of 1.2 and 2 should return a number', function () {
         assert(typeof calculateNumber('SUM', 1.2, 2) === 'number');
     });
